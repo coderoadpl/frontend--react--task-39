@@ -5,10 +5,12 @@ class BaseComponent {
 
     setInterval(
       () => {
+        this.beforeUpdate && this.beforeUpdate()
         this.count = this.count + 1
         this.render()
+        this.afterUpdate && this.afterUpdate()
       },
-      500
+      1000
     )
   }
 
