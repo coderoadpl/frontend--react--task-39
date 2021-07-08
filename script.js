@@ -2,6 +2,14 @@ class Component {
   constructor(){
     this.container = null
     this.count = 0
+
+    setInterval(
+      () => {
+        this.count = this.count + 1
+        this.render()
+      },
+      500
+    )
   }
 
   render(){
